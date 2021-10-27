@@ -35,7 +35,7 @@ describe('Referrals API', () => {
   });
 
   it('getByID should return related referral as an object', async() => {
-    const result = await request(app).get('/referrals/16');
+    const result = await request(app).get('/referrals/2');
 
     expect(result.status).toEqual(200);
     expect(Object.prototype.toString.call(result.body)).toEqual('[object Object]');
@@ -48,13 +48,13 @@ describe('Referrals API', () => {
   })
 
   it('put should return the updated data as an object', async () => {
-    const result = await request(app).put("/referrals/22").send(updatedData);
+    const result = await request(app).put("/referrals/1").send(updatedData);
     expect(result.status).toEqual(200);
     expect(result.body).toEqual(expect.objectContaining(updatedData));
   })
 
   it('delete should return the related data that request to be delete', async () => {
-    const result = await request(app).delete("/referrals/26");
+    const result = await request(app).delete("/referrals/3");
     expect(result.status).toEqual(200);
     expect(Object.prototype.toString.call(result.body)).toEqual('[object Object]');
   })

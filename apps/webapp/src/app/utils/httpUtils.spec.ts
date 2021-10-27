@@ -20,7 +20,7 @@ describe("httpMethod", () => {
   });
 
   it("getById success should return the related data", async () => {
-    const result = await httpMethod.getById(16);
+    const result = await httpMethod.getById(1);
     expect(Object.prototype.toString.call(result)).toEqual('[object Object]');
   });
 
@@ -35,12 +35,12 @@ describe("httpMethod", () => {
   })
 
   it("update success should return the object being modified", async () => {
-    const result = await httpMethod.update(17, data);
+    const result = await httpMethod.update(2, data);
     expect(result).toEqual(expect.objectContaining(data));
   })
 
   it("delete success should return the deleted data as an object", async () => {
-    const result = await httpMethod.delete(40);
+    const result = await httpMethod.delete(3);
     expect(Object.prototype.toString.call(result)).toEqual('[object Object]');
   })
   
