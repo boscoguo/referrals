@@ -84,7 +84,7 @@ const SubmitForm = ({ setOpen, updateId, updateResult, setReferrals }: SubmitFor
       <label>
         <p>{feildsArr[index]}:</p>
         <div>
-          <Field type="text" name={item} id={item} />
+          <Field type="text" name={item} />
         </div>
         <div
           className={style.submit__form_error}

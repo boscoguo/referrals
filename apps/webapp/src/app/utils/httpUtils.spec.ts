@@ -40,7 +40,7 @@ describe("httpMethod", () => {
   })
 
   it("delete success should return the deleted data as an object", async () => {
-    const result = await httpMethod.delete(3);
+    const result = await httpMethod.delete(5);
     expect(Object.prototype.toString.call(result)).toEqual('[object Object]');
   })
   
